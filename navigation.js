@@ -1,7 +1,7 @@
 <!-----------JavaScript Bereich ------------>
 
        var count = 0;
-var dummyElement = document.createElement('div');
+       var dummyElement = document.createElement('div');
             var a = document.createElement('a');
             //a.setAttribute('xlink:href', 'https://www.google.com');
             a.setAttribute('style', 'cursor: pointer');
