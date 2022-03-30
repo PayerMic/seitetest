@@ -1,12 +1,13 @@
 <!-----------JavaScript Bereich ------------>
 
-        var dummyElement = document.createElement('div');
+       var count = 0;
+var dummyElement = document.createElement('div');
             var a = document.createElement('a');
             //a.setAttribute('xlink:href', 'https://www.google.com');
             a.setAttribute('style', 'cursor: pointer');
             //a.setAttribute('target', '_blank'); // open in new tab
 
-            var groups = document.getElementsByTagName('g');
+            var groups = cmap.getElementsByTagName('g');
             for (let i = 0; i < groups.length; i++) {
                 const group = groups[i];
                 if (!group.innerHTML.includes('<path') && group.innerHTML.includes('<rect')) { // excludes paths (Connection Lines) and includes rect (Linking Phrases)
@@ -53,10 +54,14 @@
             
             //var wiki = document.getElementsByTagName('body');
             //$('body').scrollTo('#target');
-
             const element = document.getElementsByClassName(searchText);
-            //console.log(element);
-            console.log(element);
-
-            element[0].scrollIntoView();            
+            if (count < element.length) {
+                element[count].scrollIntoView();
+                count++;
+            }
+            else{
+                count = 0;
+                element[count].scrollIntoView();
+            }
+            
         }
